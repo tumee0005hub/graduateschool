@@ -73,27 +73,32 @@ async function uploadImage(file: File): Promise<string> {
   return (await res.json()).url;
 }
 
-function imageHandler(this: { quill: QuillType }) {
-  const quill = this.quill;
-  const input = document.createElement("input");
-  input.type = "file";
-  input.accept = "image/*";
-  input.click();
-  input.onchange = async () => {
-    const file = input.files?.[0];
-    if (!file) return;
-    try {
-      const url = await uploadImage(file);
-      const range = quill.getSelection(true);
-      quill.insertEmbed(range?.index ?? 0, "image", url);
-      quill.setSelection((range?.index ?? 0) + 1);
-    } catch {
-      alert("Зураг оруулахад алдаа гарлаа");
-    }
-  };
+/* ── Replace base64 data-URI images (pasted / drag-dropped into the editor)
+   with uploaded Supabase URLs, so the saved JSON body stays small. Embedding
+   images as base64 bloats the request past Vercel's 4.5 MB limit → 413. ── */
+async function uploadEmbeddedImages(html: string): Promise<string> {
+  if (typeof window === "undefined" || !html.includes("data:image"))
+    return html;
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const imgs = Array.from(
+    doc.querySelectorAll<HTMLImageElement>('img[src^="data:image"]'),
+  );
+  for (const img of imgs) {
+    const src = img.getAttribute("src");
+    if (!src) continue;
+    const blob = await (await fetch(src)).blob();
+    const ext = (blob.type.split("/")[1] || "png").split("+")[0];
+    const file = new File([blob], `pasted-${Date.now()}.${ext}`, {
+      type: blob.type,
+    });
+    img.setAttribute("src", await uploadImage(file));
+  }
+  return doc.body.innerHTML;
 }
 
-/* ── Quill config with native table module ── */
+/* ── Quill config with native table module ──
+   No toolbar "image" button: images are added by pasting / drag-dropping into
+   the editor (base64 → uploaded URL on save via uploadEmbeddedImages). ── */
 const QUILL_MODULES = {
   table: true,
   toolbar: {
@@ -104,10 +109,9 @@ const QUILL_MODULES = {
       [{ align: [] }],
       [{ list: "ordered" }, { list: "bullet" }],
       [{ indent: "-1" }, { indent: "+1" }],
-      ["blockquote", "link", "image", "video"],
+      ["blockquote", "link", "video"],
       ["clean"],
     ],
-    handlers: { image: imageHandler },
   },
   clipboard: { matchVisual: false },
 };
@@ -471,6 +475,14 @@ export default function NewsForm({ initialData, mode }: NewsFormProps) {
     setSaving(true);
     setError("");
     try {
+      // Convert any pasted/dropped base64 images into uploaded URLs so the
+      // request body stays small (otherwise Vercel rejects it with 413).
+      const [content_mn, content_en] = await Promise.all([
+        uploadEmbeddedImages(form.content_mn),
+        uploadEmbeddedImages(form.content_en),
+      ]);
+      const payload = { ...form, content_mn, content_en };
+
       const url =
         mode === "create"
           ? "/api/admin/news"
@@ -478,15 +490,26 @@ export default function NewsForm({ initialData, mode }: NewsFormProps) {
       const res = await fetch(url, {
         method: mode === "create" ? "POST" : "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       if (res.status === 401) {
         router.push("/admin/login");
         return;
       }
       if (!res.ok) {
-        const d = await res.json();
-        throw new Error(d.error || "Хадгалахад алдаа гарлаа");
+        // The error body may be plain text (e.g. Vercel's "Request Entity Too
+        // Large" 413), not JSON — read as text first, then try to parse.
+        const text = await res.text();
+        let message = "Хадгалахад алдаа гарлаа";
+        try {
+          message = JSON.parse(text).error || message;
+        } catch {
+          message =
+            res.status === 413
+              ? "Хадгалах мэдээллийн хэмжээ хэт том байна. Зургийг шууд хуулахын оронд 'Зураг' товчоор оруулна уу."
+              : text.slice(0, 200) || message;
+        }
+        throw new Error(message);
       }
       router.push("/admin/news");
     } catch (err) {
