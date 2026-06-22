@@ -4,7 +4,7 @@ import { verifySession } from "@/lib/auth";
 import { getServiceSupabase } from "@/lib/supabase";
 import { NEWS_CACHE_TAG } from "@/lib/news";
 
-export async function GET(request: Request) {
+export async function GET() {
   if (!(await verifySession())) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
