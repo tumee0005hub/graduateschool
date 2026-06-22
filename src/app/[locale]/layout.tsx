@@ -68,7 +68,7 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale as Locale);
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale} className={inter.variable} data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col antialiased font-sans">
         <NavigationProgress />
         <ScrollToTop />

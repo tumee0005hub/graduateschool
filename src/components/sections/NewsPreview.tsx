@@ -1,22 +1,10 @@
 import { t, type Locale } from "@/lib/i18n";
 import { getLatestNews } from "@/lib/news";
-import newsData from "@/data/news.json";
 import { NewsPreviewClient } from "./NewsPreviewClient";
 
 interface NewsPreviewProps {
   locale: Locale;
   dict: Record<string, unknown>;
-}
-
-interface StaticNewsItem {
-  id: number;
-  nameMn: string;
-  nameEn: string | null;
-  filePathMn: string;
-  published: boolean;
-  lastModifiedDate: string;
-  typeNameMn: string;
-  typeNameEn: string;
 }
 
 export default async function NewsPreview({ locale, dict }: NewsPreviewProps) {
@@ -53,19 +41,6 @@ export default async function NewsPreview({ locale, dict }: NewsPreviewProps) {
     }
   } catch (err) {
     console.error("[NewsPreview] getLatestNews failed:", err);
-  }
-
-  if (newsItems.length === 0) {
-    newsItems = (newsData as StaticNewsItem[])
-      .filter((n) => n.published)
-      .slice(0, 4)
-      .map((n) => ({
-        id: n.id,
-        title: locale === "mn" ? n.nameMn : n.nameEn || n.nameMn,
-        image: n.filePathMn,
-        date: formatDate(n.lastModifiedDate),
-        slug: String(n.id),
-      }));
   }
 
   return (

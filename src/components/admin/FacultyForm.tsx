@@ -24,6 +24,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import type { FacultyCategory, FacultyMember } from "@/lib/faculty";
+import { driveImageUrl } from "@/lib/utils";
 import Image from "next/image";
 
 interface FacultyFormProps {
@@ -231,7 +232,7 @@ export default function FacultyForm({
               {form.photo_url ? (
                 <div className="relative group w-32 h-32 rounded-xl overflow-hidden">
                   <Image
-                    src={form.photo_url}
+                    src={driveImageUrl(form.photo_url)}
                     alt=""
                     fill
                     className="w-full h-full object-cover"

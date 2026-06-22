@@ -5,6 +5,7 @@ import Image from "next/image";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { ChevronDown, User } from "lucide-react";
 import type { FacultyCategory, FacultyMember } from "@/lib/faculty";
+import { driveImageUrl } from "@/lib/utils";
 
 interface Props {
   categories: FacultyCategory[];
@@ -39,7 +40,7 @@ function MemberCard({ m, locale }: { m: FacultyMember; locale: string }) {
         <div className="relative w-24 h-24 rounded-xl overflow-hidden bg-muted/50">
           {hasPhoto ? (
             <Image
-              src={m.photo_url}
+              src={driveImageUrl(m.photo_url)}
               alt={l(m.name_mn, m.name_en, locale)}
               fill
               className="object-cover object-top"

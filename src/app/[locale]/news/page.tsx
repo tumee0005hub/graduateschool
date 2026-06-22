@@ -3,7 +3,6 @@ import { getCategoryName } from "@/lib/supabase";
 import { getActiveNewsList } from "@/lib/news";
 import PageHero from "@/components/sections/PageHero";
 import NewsListClient from "@/components/sections/NewsListClient";
-import newsData from "@/data/news.json";
 
 export async function generateMetadata({
   params,
@@ -13,18 +12,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = getDictionary(locale as Locale);
   return { title: t(dict, "newsList") };
-}
-
-interface StaticNews {
-  id: number;
-  nameMn: string;
-  nameEn: string | null;
-  filePathMn: string;
-  published: boolean;
-  lastModifiedDate: string;
-  typeNameMn: string;
-  typeNameEn: string;
-  typeCode: string;
 }
 
 function formatDate(d: string, locale: string) {
@@ -72,20 +59,6 @@ export default async function NewsPage({
     }
   } catch (err) {
     console.error("[news/page] getActiveNewsList failed:", err);
-  }
-
-  if (items.length === 0) {
-    items = (newsData as StaticNews[])
-      .filter((n) => n.published)
-      .map((n) => ({
-        id: n.id,
-        title: locale === "mn" ? n.nameMn : n.nameEn || n.nameMn,
-        image: n.filePathMn,
-        date: formatDate(n.lastModifiedDate, locale),
-        slug: String(n.id),
-        category: locale === "mn" ? n.typeNameMn : n.typeNameEn,
-        categoryCode: n.typeCode || "",
-      }));
   }
 
   return (

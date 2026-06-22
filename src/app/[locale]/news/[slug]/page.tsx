@@ -6,18 +6,6 @@ import { getDictionary, t, type Locale } from "@/lib/i18n";
 import { getCategoryName } from "@/lib/supabase";
 import { getNewsBySlug, getRelatedNews } from "@/lib/news";
 import { sanitizeNewsHtml } from "@/lib/sanitize";
-import newsData from "@/data/news.json";
-
-interface StaticNews {
-  id: number;
-  nameMn: string;
-  nameEn: string | null;
-  filePathMn: string;
-  published: boolean;
-  lastModifiedDate: string;
-  typeNameMn: string;
-  typeNameEn: string;
-}
 
 function formatDate(d: string, locale: string) {
   const date = new Date(d.replace(" ", "T"));
@@ -59,19 +47,7 @@ export async function generateMetadata({
       return { title };
     }
   } catch {
-    /* fallback */
-  }
-
-  const staticItem = (newsData as StaticNews[]).find(
-    (n) => String(n.id) === slug,
-  );
-  if (staticItem) {
-    return {
-      title:
-        locale === "mn"
-          ? staticItem.nameMn
-          : staticItem.nameEn || staticItem.nameMn,
-    };
+    /* ignore */
   }
 
   return { title: t(dict, "news") };
@@ -93,7 +69,6 @@ export default async function NewsDetailPage({
   let currentId = 0;
   let pdfUrl: string | null = null;
 
-  // Try Supabase
   try {
     const item = await getNewsBySlug(slug);
     if (item) {
@@ -107,25 +82,10 @@ export default async function NewsDetailPage({
       pdfUrl = item.pdf_url;
     }
   } catch {
-    /* fallback */
+    /* ignore */
   }
 
-  // Fallback to static
-  if (!title) {
-    const staticItem = (newsData as StaticNews[]).find(
-      (n) => String(n.id) === slug && n.published,
-    );
-    if (!staticItem) notFound();
-    title =
-      locale === "mn"
-        ? staticItem!.nameMn
-        : staticItem!.nameEn || staticItem!.nameMn;
-    image = staticItem!.filePathMn;
-    date = staticItem!.lastModifiedDate;
-    category =
-      locale === "mn" ? staticItem!.typeNameMn : staticItem!.typeNameEn;
-    currentId = staticItem!.id;
-  }
+  if (!title) notFound();
 
   // Get related news
   let relatedNews: {
@@ -147,19 +107,6 @@ export default async function NewsDetailPage({
     }));
   } catch {
     /* ignore */
-  }
-
-  if (relatedNews.length === 0) {
-    relatedNews = (newsData as StaticNews[])
-      .filter((n) => n.published && n.id !== currentId)
-      .slice(0, 3)
-      .map((n) => ({
-        id: n.id,
-        title: locale === "mn" ? n.nameMn : n.nameEn || n.nameMn,
-        image: n.filePathMn,
-        date: formatDateShort(n.lastModifiedDate, locale),
-        slug: String(n.id),
-      }));
   }
 
   return (

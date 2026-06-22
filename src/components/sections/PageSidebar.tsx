@@ -14,28 +14,25 @@ interface PageSidebarProps {
   onThisPageLabel: string;
 }
 
-function getInitialSection(sections: Section[]) {
-  if (typeof window !== "undefined" && window.location.hash) {
-    const hash = window.location.hash.slice(1);
-    if (sections.some((s) => s.id === hash)) return hash;
-  }
-  return sections[0]?.id || "";
-}
-
 export default function PageSidebar({
   sections,
   onThisPageLabel,
 }: PageSidebarProps) {
-  const [activeSection, setActiveSection] = useState(() =>
-    getInitialSection(sections),
-  );
+  // Start from the first section so server and client render identically;
+  // the URL hash is applied after mount to avoid a hydration mismatch.
+  const [activeSection, setActiveSection] = useState(sections[0]?.id || "");
 
   useEffect(() => {
-    // Scroll to hash on mount
+    // Apply the URL hash (active state + scroll) once mounted on the client.
+    // Deferred so it doesn't run synchronously in the effect body.
     if (window.location.hash) {
-      const el = document.getElementById(window.location.hash.slice(1));
-      if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+      const hash = window.location.hash.slice(1);
+      if (sections.some((s) => s.id === hash)) {
+        const el = document.getElementById(hash);
+        setTimeout(() => {
+          setActiveSection(hash);
+          el?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       }
     }
 
