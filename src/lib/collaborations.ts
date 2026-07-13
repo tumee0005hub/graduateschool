@@ -36,5 +36,5 @@ export const getCollaborations = unstable_cache(
     return data as Collaboration[];
   },
   ["collaborations-list"],
-  { tags: [COLLABORATIONS_CACHE_TAG], revalidate: 3600 },
+  { tags: [COLLABORATIONS_CACHE_TAG], revalidate: false },
 );

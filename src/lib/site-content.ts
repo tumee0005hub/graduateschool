@@ -41,7 +41,7 @@ export const getConferencesContent = unstable_cache(
     return data.value as ConferencesContent;
   },
   ["conferences-content"],
-  { tags: [SITE_CONTENT_CACHE_TAG], revalidate: 3600 },
+  { tags: [SITE_CONTENT_CACHE_TAG], revalidate: false },
 );
 
 export const getHospitals = unstable_cache(
@@ -59,5 +59,5 @@ export const getHospitals = unstable_cache(
     return data.value as HospitalItem[];
   },
   ["hospitals-content"],
-  { tags: [SITE_CONTENT_CACHE_TAG], revalidate: 3600 },
+  { tags: [SITE_CONTENT_CACHE_TAG], revalidate: false },
 );

@@ -52,5 +52,5 @@ export const getFacultyData = unstable_cache(
     };
   },
   ["faculty-data"],
-  { tags: [FACULTY_CACHE_TAG], revalidate: 3600 },
+  { tags: [FACULTY_CACHE_TAG], revalidate: false },
 );

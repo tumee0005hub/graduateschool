@@ -36,7 +36,7 @@ export const getLatestNews = unstable_cache(
     return (data as NewsListItem[]) || [];
   },
   ["latest-news"],
-  { tags: [NEWS_CACHE_TAG], revalidate: 3600 },
+  { tags: [NEWS_CACHE_TAG], revalidate: false },
 );
 
 // ── List: all active news for the news listing page (no content) ──
@@ -56,7 +56,7 @@ export const getActiveNewsList = unstable_cache(
     return (data as NewsListItem[]) || [];
   },
   ["active-news-list"],
-  { tags: [NEWS_CACHE_TAG], revalidate: 3600 },
+  { tags: [NEWS_CACHE_TAG], revalidate: false },
 );
 
 // ── Related: latest N items excluding a specific news ID (lightweight) ──
@@ -78,7 +78,7 @@ export const getRelatedNews = unstable_cache(
     return (data as NewsListItem[]) || [];
   },
   ["related-news"],
-  { tags: [NEWS_CACHE_TAG], revalidate: 3600 },
+  { tags: [NEWS_CACHE_TAG], revalidate: false },
 );
 
 // ── Detail: single news by slug (full content) ──
@@ -120,5 +120,5 @@ export const getNewsBySlug = unstable_cache(
     return null;
   },
   ["news-by-slug"],
-  { tags: [NEWS_CACHE_TAG], revalidate: 3600 },
+  { tags: [NEWS_CACHE_TAG], revalidate: false },
 );
