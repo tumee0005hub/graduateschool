@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "MNUMS Graduate School",
   description:
     "Mongolian National University of Medical Sciences - Graduate School",
+  verification: {
+    google: "0V9vOnwS6hL7KgOh9YHa5CK83J71Ua6xbxQcR9RV2lI",
+  },
 };
 
 export default function RootLayout({
