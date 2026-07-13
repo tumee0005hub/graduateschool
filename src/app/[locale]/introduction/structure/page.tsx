@@ -8,6 +8,7 @@ import GraduateSchoolScheme, {
 import FacultyTeams from "@/components/sections/FacultyTeams";
 import { getFacultyData } from "@/lib/faculty";
 import { leadership } from "@/data/leadership";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -15,7 +16,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.structure") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.structure"),
+    alternates: localeAlternates(locale, "/introduction/structure"),
+  };
 }
 
 export default async function StructurePage({

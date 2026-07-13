@@ -6,6 +6,7 @@ import {
   academicCenterPrograms,
   academicCenterContacts,
 } from "@/data/academic-center";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.academicCenter") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.academicCenter"),
+    alternates: localeAlternates(locale, "/training-centers/academic"),
+  };
 }
 
 interface Step {

@@ -1,5 +1,6 @@
 import { getDictionary, t, type Locale } from "@/lib/i18n";
 import GenericSectionPage from "@/components/sections/GenericSectionPage";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -7,7 +8,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "csge.header") };
+  return {
+    title: t(getDictionary(locale as Locale), "csge.header"),
+    alternates: localeAlternates(locale, "/about/academic-council"),
+  };
 }
 
 export default async function AcademicCouncilPage({

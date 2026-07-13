@@ -2,6 +2,7 @@ import { getDictionary, t, type Locale } from "@/lib/i18n";
 import { getCollaborations } from "@/lib/collaborations";
 import PageHero from "@/components/sections/PageHero";
 import CollaborationContent from "@/components/sections/CollaborationContent";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -11,6 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const dict = getDictionary(locale as Locale);
   return {
+    alternates: localeAlternates(locale, "/collaboration"),
     title: t(dict, "menu.internationalRelations"),
   };
 }

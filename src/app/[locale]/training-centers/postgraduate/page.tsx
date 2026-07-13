@@ -8,6 +8,7 @@ import {
   baseHospitals,
 } from "@/data/postgraduate-center";
 import { getHospitals } from "@/lib/site-content";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -16,6 +17,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   return {
+    alternates: localeAlternates(locale, "/training-centers/postgraduate"),
     title: t(getDictionary(locale as Locale), "menu.postgraduateCenter"),
   };
 }

@@ -2,6 +2,7 @@ import { getDictionary, t, type Locale } from "@/lib/i18n";
 import PageHero from "@/components/sections/PageHero";
 import FacultyTeams from "@/components/sections/FacultyTeams";
 import { getFacultyData } from "@/lib/faculty";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.facultyTeams") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.facultyTeams"),
+    alternates: localeAlternates(locale, "/introduction/faculty"),
+  };
 }
 
 export default async function FacultyPage({

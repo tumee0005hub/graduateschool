@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { locales, getDictionary, type Locale } from "@/lib/i18n";
+import { buildJsonLd } from "@/lib/seo";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -48,10 +49,9 @@ export async function generateMetadata({
       locale,
       type: "website",
     },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: { mn: "/mn", en: "/en" },
-    },
+    // NOTE: no `alternates` here — a layout-level canonical is inherited by
+    // every page and would point them all at the homepage. Each page sets its
+    // own via localeAlternates() in src/lib/seo.ts.
   };
 }
 
@@ -66,10 +66,18 @@ export default async function LocaleLayout({
   if (!locales.includes(locale as Locale)) notFound();
 
   const dict = getDictionary(locale as Locale);
+  const jsonLd = buildJsonLd(locale, {
+    school: String(dict.graduateSchool),
+    university: String(dict.mnums),
+  });
 
   return (
     <html lang={locale} className={inter.variable} data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col antialiased font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <NavigationProgress />
         <ScrollToTop />
         <BackToTop />

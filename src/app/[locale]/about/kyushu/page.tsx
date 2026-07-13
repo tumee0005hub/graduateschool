@@ -1,5 +1,6 @@
 import { getDictionary, t, getObj, type Locale } from "@/lib/i18n";
 import PageHero from "@/components/sections/PageHero";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -8,6 +9,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   return {
+    alternates: localeAlternates(locale, "/about/kyushu"),
     title: t(getDictionary(locale as Locale), "partnershipKyushu.title"),
   };
 }

@@ -6,6 +6,7 @@ import { getDictionary, t, type Locale } from "@/lib/i18n";
 import { getCategoryName } from "@/lib/supabase";
 import { getNewsBySlug, getRelatedNews } from "@/lib/news";
 import { sanitizeNewsHtml } from "@/lib/sanitize";
+import { localeAlternates } from "@/lib/seo";
 
 function formatDate(d: string, locale: string) {
   const date = new Date(d.replace(" ", "T"));
@@ -38,19 +39,20 @@ export async function generateMetadata({
 }) {
   const { locale, slug } = await params;
   const dict = getDictionary(locale as Locale);
+  const alternates = localeAlternates(locale, `/news/${slug}`);
 
   try {
     const item = await getNewsBySlug(slug);
     if (item) {
       const title =
         locale === "mn" ? item.title_mn : item.title_en || item.title_mn;
-      return { title };
+      return { title, alternates };
     }
   } catch {
     /* ignore */
   }
 
-  return { title: t(dict, "news") };
+  return { title: t(dict, "news"), alternates };
 }
 
 export default async function NewsDetailPage({

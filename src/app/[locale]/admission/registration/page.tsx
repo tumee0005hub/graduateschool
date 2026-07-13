@@ -1,5 +1,6 @@
 import { getDictionary, t, type Locale } from "@/lib/i18n";
 import GenericSectionPage from "@/components/sections/GenericSectionPage";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -8,6 +9,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   return {
+    alternates: localeAlternates(locale, "/admission/registration"),
     title: t(getDictionary(locale as Locale), "admissionNew.tab2.title"),
   };
 }

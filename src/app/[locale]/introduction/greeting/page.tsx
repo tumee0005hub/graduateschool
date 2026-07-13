@@ -1,5 +1,6 @@
 import { getDictionary, t, type Locale } from "@/lib/i18n";
 import PageHero from "@/components/sections/PageHero";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -7,7 +8,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.greeting") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.greeting"),
+    alternates: localeAlternates(locale, "/introduction/greeting"),
+  };
 }
 
 export default async function GreetingPage({

@@ -3,6 +3,7 @@ import PageHero from "@/components/sections/PageHero";
 import PageSidebar from "@/components/sections/PageSidebar";
 import { ExternalLink } from "lucide-react";
 import { getConferencesContent } from "@/lib/site-content";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -10,7 +11,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.research") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.research"),
+    alternates: localeAlternates(locale, "/research/conferences"),
+  };
 }
 
 export default async function ConferencesPage({

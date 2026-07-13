@@ -1,6 +1,7 @@
 import { getDictionary, t, getObj, type Locale } from "@/lib/i18n";
 import PageHero from "@/components/sections/PageHero";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -8,7 +9,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.contact") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.contact"),
+    alternates: localeAlternates(locale, "/contact"),
+  };
 }
 
 export default async function ContactPage({

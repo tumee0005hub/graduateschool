@@ -5,6 +5,16 @@ import Statistics from "@/components/sections/Statistics";
 import NewsPreview from "@/components/sections/NewsPreview";
 import CollaborationPreview from "@/components/sections/CollaborationPreview";
 import { getCollaborations } from "@/lib/collaborations";
+import { localeAlternates } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return { alternates: localeAlternates(locale, "") };
+}
 
 export default async function HomePage({
   params,

@@ -3,6 +3,7 @@ import { getCategoryName } from "@/lib/supabase";
 import { getActiveNewsList } from "@/lib/news";
 import PageHero from "@/components/sections/PageHero";
 import NewsListClient from "@/components/sections/NewsListClient";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -11,7 +12,10 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const dict = getDictionary(locale as Locale);
-  return { title: t(dict, "newsList") };
+  return {
+    title: t(dict, "newsList"),
+    alternates: localeAlternates(locale, "/news"),
+  };
 }
 
 function formatDate(d: string, locale: string) {

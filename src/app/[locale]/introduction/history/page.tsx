@@ -2,6 +2,7 @@ import { getDictionary, t, getObj, type Locale } from "@/lib/i18n";
 import PageHero from "@/components/sections/PageHero";
 import PageSidebar from "@/components/sections/PageSidebar";
 import Image from "next/image";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return { title: t(getDictionary(locale as Locale), "menu.history") };
+  return {
+    title: t(getDictionary(locale as Locale), "menu.history"),
+    alternates: localeAlternates(locale, "/introduction/history"),
+  };
 }
 
 interface YearEntry {
