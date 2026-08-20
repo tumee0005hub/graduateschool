@@ -79,7 +79,7 @@ export default async function RulesPage({
     },
     {
       label: "БИЧИГ БАРИМТ НӨХӨН ОЛГОХ",
-      href: "http://postgraduate.mnums.edu.mn/?page_id=1782",
+      href: "https://drive.google.com/file/d/1KakA6chuS6mZUx8Vv0g4dFln5MdKihfE/view?usp=sharing",
     },
     {
       label: "ТӨРИЙН САНГААР СУРАЛЦАГЧИЙН ИРЦИЙН БҮРТГЭЛИЙН ХУУДАС",
