@@ -87,11 +87,11 @@ export default async function RulesPage({
       children: [
         {
           label: "ҮНДСЭН МЭРГЭШЛИЙН БҮРТГЭЛИЙН ХУУДАС",
-          href: "http://postgraduate.mnums.edu.mn/wp-content/uploads/2026/02/%D2%AE%D0%9D%D0%94%D0%A1%D0%AD%D0%9D-%D0%91%D2%AE%D0%A0%D0%A2%D0%93%D0%AD%D0%9B%D0%98%D0%99%D0%9D-%D0%A5%D0%A3%D0%A3%D0%94%D0%90%D0%A1.docx",
+          href: "https://docs.google.com/document/d/1cn2dyWZaQ8wMH_XrRdwOcc1zVelrQ2RV/edit?usp=drive_link&ouid=114229193842222801488&rtpof=true&sd=true",
         },
         {
           label: "ТӨРӨЛЖСӨН МЭРГЭШЛИЙН БҮРТГЭЛИЙН ХУУДАС",
-          href: "http://postgraduate.mnums.edu.mn/wp-content/uploads/2026/02/%D0%A2%D3%A8%D0%A0%D3%A8%D0%9B%D0%96%D0%A1%D3%A8%D0%9D-%D0%91%D2%AE%D0%A0%D0%A2%D0%93%D0%AD%D0%9B%D0%98%D0%99%D0%9D-%D0%A5%D0%A3%D0%A3%D0%94%D0%90%D0%A1.docx",
+          href: "https://docs.google.com/document/d/1TZLePhtaLgXG6f2agC5PiY3T5Vcg-3OC/edit?usp=drive_link&ouid=114229193842222801488&rtpof=true&sd=true",
         },
       ],
     },
@@ -101,7 +101,7 @@ export default async function RulesPage({
     },
     {
       label: "ТӨРӨЛЖСӨН МЭРЭГШЛИЙН СУРГАЛТЫН ЭЛСЭЛТИЙН НИЙТЛЭГ ШААРДЛАГА",
-      href: "http://postgraduate.mnums.edu.mn/wp-content/uploads/2019/10/%D0%AD%D0%BB%D1%81%D1%8D%D0%B3%D1%87%D0%B4%D1%8D%D0%B4-%D1%82%D0%B0%D0%B2%D0%B8%D0%B3%D0%B4%D0%B0%D1%85-%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B9-%D1%88%D0%B0%D0%B0%D1%80%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0-%D0%A2%D3%A8%D0%A0%D3%A8%D0%9B%D0%96%D0%A1%D3%A8%D0%9D-%D0%A1%D0%A3%D0%A0%D0%93%D0%90%D0%9B%D0%A2.pdf",
+      href: "https://drive.google.com/file/d/1JSMDyCopUSciWNkbsaXY439l_8HkHJ0_/view?usp=drive_link",
     },
     {
       label:
@@ -111,7 +111,7 @@ export default async function RulesPage({
     {
       label:
         '"МЭРГЭШҮҮЛЭХ БОЛОН ТАСРАЛТГҮЙ СУРГАЛТ ЗОХИОН БАЙГУУЛАХ, СУРГАЛТ ЭРХЛЭХ БАЙГУУЛЛАГЫН СОНГОХ, ЗӨВШӨӨРӨЛ ОЛГОХ, СУНГАХ, ХҮЧИНГҮЙ БОЛГОХ ЖУРАМ" – ЭМС-ЫН 2017 ОНЫ А337 ДУГААР ТУШААЛ',
-      href: "http://postgraduate.mnums.edu.mn/wp-content/uploads/2025/05/2017.09.01-%D0%90337-TDS.pdf",
+      href: "https://drive.google.com/file/d/19M13zEpFo5StHrgfcQa7rCPEMkNDLFQL/view?usp=drive_link",
     },
   ];
 
