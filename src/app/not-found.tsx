@@ -13,7 +13,7 @@ export default function RootNotFound() {
   return (
     <html lang="mn" className={inter.variable}>
       <head>
-        <title>404 - Хуудас олдсонгүй | MNUMS Graduate School</title>
+        <title>404 - Хуудас олдсонгүй | MNUMS Graduate School of Medical Scienc</title>
         <meta
           name="description"
           content="Хуудас олдсонгүй. The page you are looking for does not exist."
