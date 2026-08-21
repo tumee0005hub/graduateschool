@@ -111,7 +111,7 @@ export default async function StructurePage({
                   </p>
                 ) : (
                   <p className="indent-5">
-                    The Graduate School operates through 4 training centers that
+                    The Graduate School of Medical Science operates through 4 training centers that
                     implement graduate and postgraduate training programs:{" "}
                     <strong className="text-foreground">
                       Academic Training Center
