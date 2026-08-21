@@ -201,7 +201,7 @@ export const academicCenterContacts = {
     },
     office: {
       mn: "АШУҮИС, Ахисан түвшний сургууль, 4 тоот",
-      en: "MNUMS, Graduate School, Room 4",
+      en: "MNUMS, Graduate School of Medical Science, Room 4",
     },
     email: "grad.academic@mnums.edu.mn",
   },
