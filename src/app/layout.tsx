@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MNUMS Graduate School",
+  title: "MNUMS Graduate School of Medical Science",
   description:
     "Mongolian National University of Medical Sciences - Graduate School of Medical Science",
   verification: {
