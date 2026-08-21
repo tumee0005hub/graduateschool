@@ -30,7 +30,7 @@ export function buildJsonLd(locale: string, names: { school: string; university:
         "@id": `${BASE_URL}/#organization`,
         name: names.school,
         alternateName: [
-          "Эрдмийн Сургууль",
+          "Ахисан Түвшний Сургууль",
           "АШУҮИС-ийн Ахисан Түвшний Сургууль",
           "MNUMS Graduate School",
         ],
@@ -46,7 +46,7 @@ export function buildJsonLd(locale: string, names: { school: string; university:
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         name: names.school,
-        alternateName: ["Эрдмийн Сургууль", "MNUMS Graduate School"],
+        alternateName: ["Ахисан Түвшний Сургууль", "MNUMS Graduate School of Medical Scienc"],
         url: `${BASE_URL}/${locale}`,
         publisher: { "@id": `${BASE_URL}/#organization` },
         inLanguage: ["mn", "en"],
