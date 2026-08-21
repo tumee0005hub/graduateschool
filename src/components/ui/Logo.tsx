@@ -56,7 +56,7 @@ export default function Logo({
     >
       <Image
         src={logoSrc}
-        alt="MNUMS Graduate School"
+        alt="MNUMS Graduate School of Medical Science"
         fill
         className={`object-contain object-left transition-all duration-300`}
         sizes={`${Math.round(height * 3)}px`}
