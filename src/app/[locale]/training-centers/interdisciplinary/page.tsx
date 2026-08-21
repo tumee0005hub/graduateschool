@@ -45,7 +45,7 @@ const staffData = {
   address: {
     office: {
       mn: "АШУҮИС, Ахисан түвшний сургууль, 8 тоот",
-      en: "MNUMS, Graduate School, Room 8",
+      en: "MNUMS, Graduate School of Medical Science, Room 8",
     },
     email: "grad.itc@mnums.edu.mn",
   },
@@ -205,7 +205,7 @@ const postdocResearch = [
         },
         topicNote: {
           mn: "АШУҮИС-ийн Ахисан түвшний сургуулийн докторын дараах судалгааны төсөл /төслийн гүйцэтгэгчээр/",
-          en: "MNUMS Graduate School post-doctoral research project /as project researcher/",
+          en: "MNUMS Graduate School of Medical Science post-doctoral research project /as project researcher/",
         },
         publications: [],
       },
