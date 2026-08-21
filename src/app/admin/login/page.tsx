@@ -96,7 +96,7 @@ export default function AdminLoginPage() {
               Admin Portal
             </h1>
             <p className="mt-1.5 text-sm text-white/60">
-              Graduate School — MNUMS
+              Graduate School of Medical Science — MNUMS
             </p>
           </motion.div>
 
