@@ -1,7 +1,7 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Admin Panel | Graduate School MNUMS",
+  title: "Admin Panel | Graduate School of Medical Science MNUMS",
 };
 
 export default function AdminLayout({
