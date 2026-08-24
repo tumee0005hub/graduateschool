@@ -36,7 +36,7 @@ export default function Logo({
           <p
             className={`text-sm font-bold ${variant === "white" ? "text-white" : "text-primary"}`}
           >
-            Эрдмийн Сургууль
+            Ахисан Түвшний Сургууль
           </p>
           <p
             className={`text-[10px] uppercase tracking-wide ${variant === "white" ? "text-white/60" : "text-muted-foreground"}`}
