@@ -49,7 +49,7 @@ export const basicSpecializations: SpecializationGroup[] = [
       },
       {
         name: { mn: "Сүрьеэ судлал", en: "Phthisiology" },
-        duration: { mn: "2 жил", en: "2 years" },
+        duration: { mn: "1 жил", en: "1 years" },
       },
       {
         name: { mn: "Сэтгэц судлал", en: "Psychiatry" },
