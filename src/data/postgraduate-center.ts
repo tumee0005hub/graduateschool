@@ -49,7 +49,7 @@ export const basicSpecializations: SpecializationGroup[] = [
       },
       {
         name: { mn: "Сүрьеэ судлал", en: "Phthisiology" },
-        duration: { mn: "1 жил", en: "1 years" },
+        duration: { mn: "2 жил", en: "2 years" },
       },
       {
         name: { mn: "Сэтгэц судлал", en: "Psychiatry" },
@@ -1262,27 +1262,27 @@ export const trainingPrograms: TrainingProgram[] = [
   },
   {
     name: { mn: "Гэмтэл согог судлал", en: "Traumatology" },
-    href: `${P}/2024/12/2.%D0%93%D1%8D%D0%BC%D1%82%D1%8D%D0%BB-%D1%81%D0%BE%D0%B3%D0%BE%D0%B3-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1kT1K471gUk847BCRa1wz1tT5aBKvl82O/view?usp=drive_link`,
   },
   {
     name: { mn: "Дотрын анагаах судлал", en: "Internal Medicine" },
-    href: `${P}/2024/12/3.%D0%94%D0%BE%D1%82%D1%80%D1%8B%D0%BD-%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B0%D1%85-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1emIFVoDbHsgqXiSmsto8uX0aZsy_2HMs/view?usp=drive_link`,
   },
   {
     name: { mn: "Мэдрэл судлал", en: "Neurology" },
-    href: `${P}/2024/12/4.%D0%9C%D1%8D%D0%B4%D1%80%D1%8D%D0%BB-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1TwFX_6rn7bWSz_bPt_H2-P_TDCMQZTnz/view?usp=drive_link`,
   },
   {
     name: { mn: "Мэдээгүйжүүлэг судлал", en: "Anesthesiology" },
-    href: `${P}/2024/12/5.%D0%9C%D1%8D%D0%B4%D1%8D%D1%8D%D0%B3%D2%AF%D0%B9%D0%B6%D2%AF%D2%AF%D0%BB%D1%8D%D0%B3-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1xeA7_MAlk4rHZWCzON8jC3FgLPDKlH-Q/view?usp=drive_link`,
   },
   {
     name: { mn: "Нүд судлал", en: "Ophthalmology" },
-    href: `${P}/2024/12/6.%D0%9D%D2%AF%D0%B4-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1sMdmpsOXqv1sFl_AfWjglrB6qGkonljI/view?usp=drive_link`,
   },
   {
     name: { mn: "Өрхийн анагаах ухаан судлал", en: "Family Medicine" },
-    href: `${P}/2024/12/7.%D3%A8%D1%80%D1%85%D0%B8%D0%B9%D0%BD-%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B0%D1%85-%D1%83%D1%85%D0%B0%D0%B0%D0%BD-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1Vl3FKKBFbdw-DYCZmyQN3kdTGBst4M0i/view?usp=drive_link`,
   },
   {
     name: { mn: "Сүрьеэ судлал", en: "Phthisiology" },
@@ -1290,50 +1290,50 @@ export const trainingPrograms: TrainingProgram[] = [
   },
   {
     name: { mn: "Сэтгэц судлал", en: "Psychiatry" },
-    href: `${P}/2024/12/9.%D0%A1%D1%8D%D1%82%D0%B3%D1%8D%D1%86-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1inOHlSG_JywMi8m1BgF_9t796T14c9j9/view?usp=drive_link`,
   },
   {
     name: { mn: "Хавдар судлал", en: "Oncology" },
-    href: `${P}/2024/12/10.%D0%A5%D0%B0%D0%B2%D0%B4%D0%B0%D1%80-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/10w4vJ3mjwEujZIhoF9ey0SX7EXs_aCzq/view?usp=drive_link`,
   },
   {
     name: { mn: "Халдварт өвчин судлал", en: "Infectious Diseases" },
-    href: `${P}/2024/12/11.%D0%A5%D0%B0%D0%BB%D0%B4%D0%B2%D0%B0%D1%80%D1%82-%D3%A9%D0%B2%D1%87%D0%B8%D0%BD-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB%D1%8B%D0%BD-%D1%8D%D0%BC%D1%87.pdf`,
+    href: `https://drive.google.com/file/d/1cQ7mr2WOVdZuyMx7SLe2nhNVMfo42s23/view?usp=drive_link`,
   },
   {
     name: { mn: "Хүүхэд судлал", en: "Pediatrics" },
-    href: `${P}/2024/12/12.%D0%A5%D2%AF%D2%AF%D1%85%D1%8D%D0%B4-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1zqXlrRwLasvehWnE2-fAQhjtpfDW7mur/view?usp=drive_link`,
   },
   {
     name: { mn: "Чих хамар хоолой судлал", en: "Otorhinolaryngology" },
-    href: `${P}/2024/12/13.%D0%A7%D0%B8%D1%85-%D1%85%D0%B0%D0%BC%D0%B0%D1%80-%D1%85%D0%BE%D0%BE%D0%BB%D0%BE%D0%B9-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1iye2MX5c7-VwF5tsv2KOBvrujL959A9y/view?usp=drive_link`,
   },
   {
     name: { mn: "Шүүхийн анагаах ухаан судлал", en: "Forensic Medicine" },
-    href: `${P}/2024/12/14.%D0%A8%D2%AF%D2%AF%D1%85%D0%B8%D0%B9%D0%BD-%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B0%D1%85-%D1%83%D1%85%D0%B0%D0%B0%D0%BD-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1rQLariIFFK7apPjOrLWi83AfEhP6XCtK/view?usp=drive_link`,
   },
   {
     name: { mn: "Эмнэлзүйн эмгэг судлал", en: "Clinical Pathology" },
-    href: `${P}/2024/12/15.%D0%AD%D0%BC%D0%BD%D1%8D%D0%BB%D0%B7%D2%AF%D0%B9%D0%BD-%D1%8D%D0%BC%D0%B3%D1%8D%D0%B3-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1Bx3zjDgztOC06Hj-qnBcK0COp9yTfPtD/view?usp=drive_link`,
   },
   {
     name: { mn: "Эрчимт эмчилгээ судлал", en: "Intensive Care Medicine" },
-    href: `${P}/2024/12/16.%D0%AD%D1%80%D1%87%D0%B8%D0%BC%D1%82-%D1%8D%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1TNqUmd4evHBDKATNdaPHc2EcMfaDgsoH/view?usp=drive_link`,
   },
   {
     name: {
       mn: "Эх барих, эмэгтэйчүүдийн судлал",
       en: "Obstetrics & Gynecology",
     },
-    href: `${P}/2024/12/17_%D0%AD%D1%85_%D0%B1%D0%B0%D1%80%D0%B8%D1%85_%D1%8D%D0%BC%D1%8D%D0%B3%D1%82%D1%8D%D0%B9%D1%87%D2%AF%D2%AF%D0%B4%D0%B8%D0%B9%D0%BD_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1xrluJLMdvi93LmR7zkeCGUXg8f9jpDiP/view?usp=drive_link`,
   },
   {
     name: { mn: "Яаралтай тусламж судлал", en: "Emergency Medicine" },
-    href: `${P}/2024/12/18.%D0%AF%D0%B0%D1%80%D0%B0%D0%BB%D1%82%D0%B0%D0%B9-%D1%82%D1%83%D1%81%D0%BB%D0%B0%D0%BC%D0%B6-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1XCs-wNbGWErTYkBEmVhAJeoJU6b7q6pI/view?usp=drive_link`,
   },
   {
     name: { mn: "Сэргээн засах судлал", en: "Rehabilitation Medicine" },
-    href: `${P}/2024/12/19.%D0%A1%D1%8D%D1%80%D0%B3%D1%8D%D1%8D%D0%BD-%D0%B7%D0%B0%D1%81%D0%B0%D1%85-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `https://drive.google.com/file/d/1ZoHxrmcu9AR0Djr2mKSgUgrqCV46bWCv/view?usp=drive_link`,
   },
   // Traditional
   {
@@ -1370,34 +1370,34 @@ export const trainingPrograms: TrainingProgram[] = [
   // Dental
   {
     name: { mn: "Нүүр амны гажиг засал судлал", en: "Orthodontics" },
-    href: `${P}/2025/11/30_%D0%9D%D2%AF%D2%AF%D1%80_%D0%B0%D0%BC%D0%BD%D1%8B_%D0%B3%D0%B0%D0%B6%D0%B8%D0%B3_%D0%B7%D0%B0%D1%81%D0%B0%D0%BB_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB_2024_%D0%BE%D0%BD.pdf`,
+    href: `https://drive.google.com/file/d/1CO8FHMFrdmYuWB2SBK0EiZsfSvlmVskX/view?usp=drive_link`,
   },
   {
     name: { mn: "Нүүр амны согог засал судлал", en: "Prosthodontics" },
-    href: `${P}/2025/11/32_%D0%9D%D2%AF%D2%AF%D1%80_%D0%B0%D0%BC%D0%BD%D1%8B_%D1%81%D0%BE%D0%B3%D0%BE%D0%B3_%D0%B7%D0%B0%D1%81%D0%B0%D0%BB_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB_2024.pdf`,
+    href: `https://drive.google.com/file/d/1rgm1bADftuAeyBI7kIQkewsTAz2DXfln/view?usp=drive_link`,
   },
   {
     name: {
       mn: "Нүүр амны мэс засал судлал",
       en: "Oral & Maxillofacial Surgery",
     },
-    href: `${P}/2025/11/31.-%D0%9D%D2%AF%D2%AF%D1%80-%D0%B0%D0%BC%D0%BD%D1%8B-%D0%BC%D1%8D%D1%81-%D0%B7%D0%B0%D1%81%D0%B0%D0%BB-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB-2024.pdf`,
+    href: `https://drive.google.com/file/d/1T9hePK4FklqcSEyrWG-kl1f7ahv11TkA/view?usp=drive_link`,
   },
   {
     name: { mn: "Шүдний тулгуур эд судлал", en: "Periodontics" },
-    href: `${P}/2025/11/36.-%D0%A8%D2%AF%D0%B4%D0%BD%D0%B8%D0%B8%CC%86-%D1%82%D1%83%D0%BB%D0%B3%D1%83%D1%83%D1%80-%D1%8D%D0%B4-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB-2024.pdf`,
+    href: `https://drive.google.com/file/d/1XtdMKUl8bxmRGlbMskpb0AGoj0HSa5-v/view?usp=drive_link`,
   },
   {
     name: { mn: "Шүдний сувгийн эмчилгээ судлал", en: "Endodontics" },
-    href: `${P}/2025/11/35_%D0%A8%D2%AF%D0%B4%D0%BD%D0%B8%D0%B8%CC%86_%D1%81%D1%83%D0%B2%D0%B3%D0%B8%D0%B8%CC%86%D0%BD_%D1%8D%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB_2024.pdf`,
+    href: `https://drive.google.com/file/d/1qXdAOIkTHdr-R_Qm3X249fE3h8q9XIyh/view?usp=drive_link`,
   },
   {
     name: { mn: "Шүдний ерөнхий эмчилгээ судлал", en: "General Dentistry" },
-    href: `${P}/2025/11/34_%D0%A8%D2%AF%D0%B4%D0%BD%D0%B8%D0%B8%CC%86_%D0%B5%D1%80%D3%A9%D0%BD%D1%85%D0%B8%D0%B8%CC%86_%D1%8D%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB_2024.pdf`,
+    href: `https://drive.google.com/file/d/1TMxoIr4Xo_sEZDLgNCk3wk-k4In9l86D/view?usp=drive_link`,
   },
   {
     name: { mn: "Хүүхдийн нүүр ам судлал", en: "Pediatric Dentistry" },
-    href: `${P}/2025/11/33.-%D0%A5%D2%AF%D2%AF%D1%85%D0%B4%D0%B8%D0%B8%CC%86%D0%BD-%D0%BD%D2%AF%D2%AF%D1%80-%D0%B0%D0%BC-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB-2024.pdf`,
+    href: `https://drive.google.com/file/d/1yIoRHtSLz2pfSVpKl8jNl2lZWyNOWlGb/view?usp=drive_link`,
   },
 ];
 
