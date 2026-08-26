@@ -18,7 +18,7 @@ const stats = [
   {
     icon: Users,
     labelKey: "home.statistic.statistic1",
-    value: 1200,
+    value: 1924,
     suffix: "+",
   },
   {
