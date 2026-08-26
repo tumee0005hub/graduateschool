@@ -1266,10 +1266,6 @@ export const trainingPrograms: TrainingProgram[] = [
     href: `https://drive.google.com/file/d/1Vl3FKKBFbdw-DYCZmyQN3kdTGBst4M0i/view?usp=drive_link`,
   },
   {
-    name: { mn: "Сүрьеэ судлал", en: "Phthisiology" },
-    href: `${P}/2024/12/8.%D0%A1%D2%AF%D1%80%D1%8C%D0%B5%D1%8D-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
     name: { mn: "Сэтгэц судлал", en: "Psychiatry" },
     href: `https://drive.google.com/file/d/1inOHlSG_JywMi8m1BgF_9t796T14c9j9/view?usp=drive_link`,
   },
