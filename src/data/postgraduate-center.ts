@@ -48,10 +48,6 @@ export const basicSpecializations: SpecializationGroup[] = [
         duration: { mn: "2 жил", en: "2 years" },
       },
       {
-        name: { mn: "Сүрьеэ судлал", en: "Phthisiology" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
         name: { mn: "Сэтгэц судлал", en: "Psychiatry" },
         duration: { mn: "2 жил", en: "2 years" },
       },
@@ -108,38 +104,11 @@ export const basicSpecializations: SpecializationGroup[] = [
     items: [
       {
         name: {
-          mn: "Монголын уламжлалт анагаах ухаан судлал",
-          en: "Mongolian Traditional Medicine",
+          mn: "Монголын уламжлалт, анагаах ухаан, зүү эмчилгээ судлал",
+          en: "Mongolian Traditional Medicine, Acupuncture",
         },
         duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: {
-          mn: "МУАУ-ны дотор судлал",
-          en: "Traditional Internal Medicine",
-        },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: { mn: "МУАУ-ны засал судлал", en: "Traditional Manual Therapy" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: { mn: "МУАУ-ны мэдрэл судлал", en: "Traditional Neurology" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: { mn: "МУАУ-ны хүүхэд судлал", en: "Traditional Pediatrics" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: { mn: "Монгол эм судлал", en: "Mongolian Pharmacology" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
-      {
-        name: { mn: "Зүү эмчилгээ судлал", en: "Acupuncture" },
-        duration: { mn: "2 жил", en: "2 years" },
-      },
+      },      
     ],
   },
   {
@@ -1335,37 +1304,13 @@ export const trainingPrograms: TrainingProgram[] = [
     name: { mn: "Сэргээн засах судлал", en: "Rehabilitation Medicine" },
     href: `https://drive.google.com/file/d/1ZoHxrmcu9AR0Djr2mKSgUgrqCV46bWCv/view?usp=drive_link`,
   },
-  // Traditional
+  // Traditional /бусад хасагдсан чиглэлүүдийг устгав
   {
     name: {
-      mn: "Монголын уламжлалт анагаах ухаан судлал",
-      en: "Mongolian Traditional Medicine",
+      mn: "Монголын уламжлалт, анагаах ухаан, зүү эмчилгээ судлал",
+      en: "Mongolian Traditional Medicine, Acupuncture",
     },
     href: `#`,
-  },
-  {
-    name: { mn: "МУАУ-ны дотор судлал", en: "Traditional Internal Medicine" },
-    href: `${P}/2024/12/21.%D0%9C%D0%A3%D0%90%D0%A3-%D0%BD%D1%8B-%D0%B4%D0%BE%D1%82%D0%BE%D1%80-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
-    name: { mn: "МУАУ-ны засал судлал", en: "Traditional Manual Therapy" },
-    href: `${P}/2024/12/22.%D0%9C%D0%A3%D0%90%D0%A3-%D0%BD%D1%8B-%D0%B7%D0%B0%D1%81%D0%B0%D0%BB-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
-    name: { mn: "МУАУ-ны мэдрэл судлал", en: "Traditional Neurology" },
-    href: `${P}/2024/12/23.%D0%9C%D0%A3%D0%90%D0%A3-%D0%BD%D1%8B-%D0%BC%D1%8D%D0%B4%D1%80%D1%8D%D0%BB-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
-    name: { mn: "МУАУ-ны хүүхэд судлал", en: "Traditional Pediatrics" },
-    href: `${P}/2024/12/24.%D0%9C%D0%A3%D0%90%D0%A3-%D0%BD%D1%8B-%D1%85%D2%AF%D2%AF%D1%85%D1%8D%D0%B4-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
-    name: { mn: "Монгол эм судлал", en: "Mongolian Pharmacology" },
-    href: `${P}/2024/12/26.%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB-%D1%8D%D0%BC-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
-  },
-  {
-    name: { mn: "Зүү эмчилгээ судлал", en: "Acupuncture" },
-    href: `${P}/2024/12/27.%D0%97%D2%AF%D2%AF-%D1%8D%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D-%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
   },
   // Dental
   {
