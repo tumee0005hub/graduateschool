@@ -1341,7 +1341,7 @@ export const trainingPrograms: TrainingProgram[] = [
       mn: "Монголын уламжлалт анагаах ухаан судлал",
       en: "Mongolian Traditional Medicine",
     },
-    href: `${P}/2024/12/20_%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB%D1%8B%D0%BD_%D1%83%D0%BB%D0%B0%D0%BC%D0%B6%D0%BB%D0%B0%D0%BB%D1%82_%D0%B0%D0%BD%D0%B0%D0%B3%D0%B0%D0%B0%D1%85_%D1%83%D1%85%D0%B0%D0%B0%D0%BD_%D1%81%D1%83%D0%B4%D0%BB%D0%B0%D0%BB.pdf`,
+    href: `#`,
   },
   {
     name: { mn: "МУАУ-ны дотор судлал", en: "Traditional Internal Medicine" },
