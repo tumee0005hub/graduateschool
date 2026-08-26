@@ -24,6 +24,10 @@ export const basicSpecializations: SpecializationGroup[] = [
         duration: { mn: "3 жил", en: "3 years" },
       },
       {
+        name: { mn: "Арьс судлал", en: "Dermatology" },
+        duration: { mn: "2 жил", en: "2 years" },
+      },
+        {
         name: { mn: "Анатомийн эмгэг судлал", en: "Anatomical Pathology" },
         duration: { mn: "2 жил", en: "2 years" },
       },
@@ -36,6 +40,10 @@ export const basicSpecializations: SpecializationGroup[] = [
         duration: { mn: "2 жил", en: "2 years" },
       },
       {
+        name: { mn: "Мэс засал судлал", en: "Surgery" },
+        duration: { mn: "2 жил", en: "2 years" },
+      },
+       {
         name: { mn: "Мэдрэл судлал", en: "Neurology" },
         duration: { mn: "2 жил", en: "2 years" },
       },
@@ -45,6 +53,10 @@ export const basicSpecializations: SpecializationGroup[] = [
       },
       {
         name: { mn: "Өрхийн анагаах ухаан судлал", en: "Family Medicine" },
+        duration: { mn: "2 жил", en: "2 years" },
+      },
+      {
+        name: { mn: "Дүрс оношилгоо судлал", en: "Radiology" },
         duration: { mn: "2 жил", en: "2 years" },
       },
       {
