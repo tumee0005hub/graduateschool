@@ -136,7 +136,7 @@ export default function FacultyForm({
       <header className="sticky top-0 z-20 border-b border-border bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-5xl items-center gap-4 px-4 py-4 sm:px-8">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="/admin/faculty">
+            <Link prefetch={false} href="/admin/faculty">
               <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
@@ -410,7 +410,7 @@ export default function FacultyForm({
         {/* Bottom actions */}
         <div className="flex justify-end gap-3 pb-8">
           <Button variant="outline" type="button" asChild>
-            <Link href="/admin/faculty">Болих</Link>
+            <Link prefetch={false} href="/admin/faculty">Болих</Link>
           </Button>
           <Button type="submit" disabled={saving} variant="premium">
             <Save className="h-4 w-4 mr-1" />

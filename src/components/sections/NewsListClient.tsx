@@ -62,7 +62,7 @@ export default function NewsListClient({
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {filtered.map((item) => (
-            <Link
+            <Link prefetch={false}
               key={item.id}
               href={`/${locale}/news/${item.slug}`}
               className="group relative overflow-hidden rounded-2xl aspect-4/3"

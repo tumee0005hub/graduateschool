@@ -122,3 +122,26 @@ export const getNewsBySlug = unstable_cache(
   ["news-by-slug"],
   { tags: [NEWS_CACHE_TAG], revalidate: false },
 );
+
+// ── Slugs: every active news slug, used by generateStaticParams ──
+// Keeping /[locale]/news/[slug] prerendered means article views are served
+// from the CDN instead of invoking a function on every request.
+export const getActiveNewsSlugs = unstable_cache(
+  async (): Promise<string[]> => {
+    const client = getReadClient();
+    if (!client) return [];
+    const { data, error } = await client
+      .from("news")
+      .select("slug")
+      .eq("is_active", true);
+    if (error) {
+      console.error("[news] getActiveNewsSlugs query error:", error);
+      return [];
+    }
+    return ((data as { slug: string | null }[]) || [])
+      .map((row) => row.slug)
+      .filter((slug): slug is string => Boolean(slug));
+  },
+  ["active-news-slugs"],
+  { tags: [NEWS_CACHE_TAG], revalidate: false },
+);

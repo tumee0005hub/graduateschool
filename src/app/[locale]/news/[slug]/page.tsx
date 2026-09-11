@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, ArrowRight, FileText } from "lucide-react";
 import { getDictionary, t, type Locale } from "@/lib/i18n";
 import { getCategoryName } from "@/lib/supabase";
-import { getNewsBySlug, getRelatedNews } from "@/lib/news";
+import { getNewsBySlug, getRelatedNews, getActiveNewsSlugs } from "@/lib/news";
 import { sanitizeNewsHtml } from "@/lib/sanitize";
 import { localeAlternates } from "@/lib/seo";
 
@@ -30,6 +30,15 @@ function formatDateShort(d: string, locale: string) {
     month: "short",
     day: "numeric",
   });
+}
+
+// Prerender every active article at build time so article views are served
+// from the CDN. `dynamicParams` stays on (the default), so articles published
+// after a build still render on demand and are then cached until the next
+// `revalidateTag(NEWS_CACHE_TAG)`.
+export async function generateStaticParams() {
+  const slugs = await getActiveNewsSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -116,7 +125,7 @@ export default async function NewsDetailPage({
       {/* Article */}
       <article className="mx-auto max-w-4xl px-4 pt-28 pb-10 sm:px-6 sm:pt-32 sm:pb-16 lg:px-8">
         {/* Back link */}
-        <Link
+        <Link prefetch={false}
           href={`/${locale}/news`}
           className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors mb-8 group"
         >
@@ -210,7 +219,7 @@ export default async function NewsDetailPage({
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
                 {t(dict, "otherNews")}
               </h2>
-              <Link
+              <Link prefetch={false}
                 href={`/${locale}/news`}
                 className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-white bg-primary hover:bg-primary/90 px-5 py-2.5 rounded-full transition-colors group"
               >
@@ -221,7 +230,7 @@ export default async function NewsDetailPage({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedNews.map((item) => (
-                <Link
+                <Link prefetch={false}
                   key={item.id}
                   href={`/${locale}/news/${item.slug}`}
                   className="group relative overflow-hidden rounded-2xl aspect-4/3"
@@ -266,7 +275,7 @@ export default async function NewsDetailPage({
             </div>
 
             <div className="mt-8 text-center sm:hidden">
-              <Link
+              <Link prefetch={false}
                 href={`/${locale}/news`}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-primary hover:bg-primary/90 px-5 py-2.5 rounded-full transition-colors"
               >

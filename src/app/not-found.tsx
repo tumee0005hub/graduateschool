@@ -23,7 +23,7 @@ export default function RootNotFound() {
         {/* Minimal header */}
         <header className="w-full border-b border-border/60 bg-white/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[72px] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
-            <Link href="/mn" className="shrink-0 relative h-12 w-36">
+            <Link prefetch={false} href="/mn" className="shrink-0 relative h-12 w-36">
               <Image
                 src="/newLogo.png"
                 alt="MNUMS Graduate School"
@@ -61,13 +61,13 @@ export default function RootNotFound() {
 
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link
+              <Link prefetch={false}
                 href="/mn"
                 className="inline-flex items-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark transition-all duration-300"
               >
                 Нүүр хуудас
               </Link>
-              <Link
+              <Link prefetch={false}
                 href="/en"
                 className="inline-flex items-center rounded-xl border border-border px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-all duration-300"
               >

@@ -57,7 +57,7 @@ export default function Programs({ locale, dict }: ProgramsProps) {
             <div className="mt-10 space-y-3">
               {programs.map(({ labelKey, href }, i) => (
                 <FadeIn key={labelKey} delay={i * 0.1}>
-                  <Link
+                  <Link prefetch={false}
                     href={`/${locale}${href}`}
                     className="group flex items-center gap-4 rounded-2xl border border-border/40 bg-white p-4 sm:p-5 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-400"
                   >

@@ -100,14 +100,14 @@ export default function Hero({ locale, dict }: HeroProps) {
               transition={{ duration: 0.7, delay: 0.45 }}
               className={`flex flex-wrap gap-4 ${locale === "en" ? "mt-8" : "mt-10"}`}
             >
-              <Link
+              <Link prefetch={false}
                 href={`/${locale}/training-centers/postgraduate#admission`}
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-[#1a3a7a] shadow-lg shadow-black/10 hover:bg-white/95 hover:shadow-xl hover:shadow-black/15 transition-all duration-300 group"
               >
                 {t(dict, "menu.admission")}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
-              <Link
+              <Link prefetch={false}
                 href={`/${locale}/introduction/structure`}
                 className="inline-flex items-center gap-2 rounded-xl border border-[#c83232]/60 bg-[#c83232]/70 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-[#c83232] hover:border-[#c83232] transition-all duration-300"
               >

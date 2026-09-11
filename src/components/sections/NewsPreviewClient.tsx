@@ -27,7 +27,7 @@ function NewsCard({
   locale: Locale;
 }) {
   return (
-    <Link
+    <Link prefetch={false}
       href={`/${locale}/news/${item.slug}`}
       className="group relative block overflow-hidden rounded-2xl aspect-4/3"
     >
@@ -87,7 +87,7 @@ export function NewsPreviewClient({
               </h2>
               <div className="mt-4 section-divider" />
             </div>
-            <Link
+            <Link prefetch={false}
               href={`/${locale}/news`}
               className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-white bg-primary hover:bg-primary/90 px-5 py-2.5 rounded-full transition-colors group"
             >
@@ -106,7 +106,7 @@ export function NewsPreviewClient({
         </FadeIn>
 
         <div className="mt-10 text-center sm:hidden">
-          <Link
+          <Link prefetch={false}
             href={`/${locale}/news`}
             className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-primary hover:bg-primary/90 px-5 py-2.5 rounded-full transition-colors"
           >
