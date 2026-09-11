@@ -255,7 +255,7 @@ export default function AdminNewsPage() {
               Шинэчлэх
             </Button>
             <Button size="sm" asChild>
-              <Link href="/admin/news/new">
+              <Link prefetch={false} href="/admin/news/new">
                 <Plus className="h-4 w-4 mr-1" /> Мэдээ нэмэх
               </Link>
             </Button>
@@ -401,7 +401,7 @@ export default function AdminNewsPage() {
                         <td className="px-5 py-4">
                           <div className="flex items-center justify-end gap-1">
                             <Button variant="ghost" size="icon" asChild>
-                              <Link href={`/admin/news/${item.id}/edit`}>
+                              <Link prefetch={false} href={`/admin/news/${item.id}/edit`}>
                                 <Pencil className="h-4 w-4" />
                               </Link>
                             </Button>

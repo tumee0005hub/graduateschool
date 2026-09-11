@@ -149,7 +149,7 @@ export default function AdminFacultyPage() {
               Шинэчлэх
             </Button>
             <Button size="sm" asChild>
-              <Link href="/admin/faculty/new">
+              <Link prefetch={false} href="/admin/faculty/new">
                 <Plus className="h-4 w-4 mr-1" /> Багш нэмэх
               </Link>
             </Button>
@@ -256,7 +256,7 @@ export default function AdminFacultyPage() {
                         <td className="px-5 py-4">
                           <div className="flex items-center justify-end gap-1">
                             <Button variant="ghost" size="icon" asChild>
-                              <Link href={`/admin/faculty/${m.id}/edit`}>
+                              <Link prefetch={false} href={`/admin/faculty/${m.id}/edit`}>
                                 <Pencil className="h-4 w-4" />
                               </Link>
                             </Button>

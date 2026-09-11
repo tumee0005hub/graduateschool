@@ -539,7 +539,7 @@ export default function NewsForm({ initialData, mode }: NewsFormProps) {
       <header className="sticky top-0 z-20 border-b border-border bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-5xl items-center gap-4 px-4 py-4 sm:px-8">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="/admin/news">
+            <Link prefetch={false} href="/admin/news">
               <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
@@ -889,7 +889,7 @@ export default function NewsForm({ initialData, mode }: NewsFormProps) {
         {/* Bottom actions */}
         <div className="flex justify-end gap-3 pb-8">
           <Button variant="outline" type="button" asChild>
-            <Link href="/admin/news">Болих</Link>
+            <Link prefetch={false} href="/admin/news">Болих</Link>
           </Button>
           <Button type="submit" disabled={saving} variant="premium">
             <Save className="h-4 w-4 mr-1" />

@@ -53,7 +53,7 @@ export default function CollaborationPreview({
 
             return (
               <FadeIn>
-                <Link
+                <Link prefetch={false}
                   href={`/${locale}/collaboration#${collab.slug}`}
                   className="group mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center rounded-2xl border border-border/40 bg-white p-6 sm:p-8 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-400"
                 >
@@ -112,7 +112,7 @@ export default function CollaborationPreview({
 
               return (
                 <FadeIn key={collab.id} delay={i * 0.1}>
-                  <Link
+                  <Link prefetch={false}
                     href={`/${locale}/collaboration#${collab.slug}`}
                     className="group flex flex-col h-full rounded-2xl border border-border/40 bg-white overflow-hidden hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-400"
                   >
@@ -168,7 +168,7 @@ export default function CollaborationPreview({
         {collaborations.length > 3 && (
           <FadeIn delay={0.3}>
             <div className="mt-8 text-center">
-              <Link
+              <Link prefetch={false}
                 href={`/${locale}/collaboration`}
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
               >

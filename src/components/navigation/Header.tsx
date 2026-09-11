@@ -71,7 +71,7 @@ export default function Header({ locale, dict }: HeaderProps) {
       )}
     >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href={`/${locale}`} className="shrink-0 group">
+        <Link prefetch={false} href={`/${locale}`} className="shrink-0 group">
           <Logo
             height={48}
             locale={locale}
@@ -110,7 +110,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                 {t(dict, action.labelKey)}
               </button>
             ) : (
-              <Link
+              <Link prefetch={false}
                 key={action.labelKey}
                 href={
                   action.external
@@ -133,7 +133,7 @@ export default function Header({ locale, dict }: HeaderProps) {
             ),
           )}
 
-          <Link
+          <Link prefetch={false}
             href={switchPath}
             className={cn(
               "inline-flex items-center rounded-lg border px-2.5 py-2 text-sm font-bold tracking-wider transition-all duration-300 uppercase",
@@ -164,7 +164,7 @@ export default function Header({ locale, dict }: HeaderProps) {
               <Dialog.Overlay className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm animate-in fade-in-0 duration-300" />
               <Dialog.Content className="fixed inset-y-0 right-0 z-50 w-full max-w-[340px] bg-white shadow-2xl overflow-y-auto animate-in slide-in-from-right duration-300">
                 <div className="flex items-center justify-between p-5 border-b border-border/60">
-                  <Link
+                  <Link prefetch={false}
                     href={`/${locale}`}
                     className="flex items-center gap-2.5"
                     onClick={() => setMobileOpen(false)}
@@ -204,7 +204,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                           {t(dict, action.labelKey)}
                         </button>
                       ) : (
-                        <Link
+                        <Link prefetch={false}
                           key={action.labelKey}
                           href={
                             action.external
@@ -222,7 +222,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                   </div>
                 </nav>
                 <div className="p-4 border-t border-border/60">
-                  <Link
+                  <Link prefetch={false}
                     href={switchPath}
                     className="flex items-center gap-2.5 rounded-xl px-4 py-3 text-sm font-medium hover:bg-muted transition-colors"
                     onClick={() => setMobileOpen(false)}
@@ -273,7 +273,7 @@ function DesktopNavItem({
   // Simple link (no children)
   if (!item.children) {
     return (
-      <Link
+      <Link prefetch={false}
         href={item.external ? item.href || "#" : `/${locale}${item.href || ""}`}
         target={item.external ? "_blank" : undefined}
         rel={item.external ? "noopener noreferrer" : undefined}
@@ -414,7 +414,7 @@ function DropdownItem({
               )}
             >
               {item.children.map((sub) => (
-                <Link
+                <Link prefetch={false}
                   key={sub.labelKey}
                   href={
                     sub.external
@@ -443,7 +443,7 @@ function DropdownItem({
 
   // Simple link
   return (
-    <Link
+    <Link prefetch={false}
       href={item.external ? item.href || "#" : `/${locale}${item.href || ""}`}
       target={item.external ? "_blank" : undefined}
       rel={item.external ? "noopener noreferrer" : undefined}
@@ -492,7 +492,7 @@ function MobileNavItem({
                 onClose={onClose}
               />
             ) : (
-              <Link
+              <Link prefetch={false}
                 key={child.labelKey}
                 href={
                   child.external
@@ -513,7 +513,7 @@ function MobileNavItem({
   }
 
   return (
-    <Link
+    <Link prefetch={false}
       href={item.external ? item.href || "#" : `/${locale}${item.href || ""}`}
       target={item.external ? "_blank" : undefined}
       className="block rounded-xl px-4 py-3 text-sm font-medium hover:bg-muted/60 transition-colors"

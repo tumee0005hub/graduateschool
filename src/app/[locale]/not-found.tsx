@@ -27,13 +27,13 @@ export default function NotFound() {
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link
+          <Link prefetch={false}
             href="/mn"
             className="inline-flex items-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark transition-all duration-300"
           >
             Нүүр хуудас
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/en"
             className="inline-flex items-center rounded-xl border border-border px-6 py-3 text-sm font-semibold hover:bg-muted transition-all duration-300"
           >

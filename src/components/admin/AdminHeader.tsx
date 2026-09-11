@@ -38,7 +38,7 @@ export default function AdminHeader() {
             {tabs.map((tab) => {
               const active = pathname.startsWith(tab.href);
               return (
-                <Link
+                <Link prefetch={false}
                   key={tab.href}
                   href={tab.href}
                   className={`flex items-center gap-2 rounded-lg px-3 py-2 font-medium transition-colors ${
