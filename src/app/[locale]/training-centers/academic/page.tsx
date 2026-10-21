@@ -481,6 +481,65 @@ export default async function AcademicCenterPage({
                   />
                 </div>
 
+{/* Calendar Plans */}
+<div className="rounded-xl border border-border p-6">
+  <h3 className="text-lg font-semibold text-foreground mb-4">
+    Календарчилсан төлөвлөгөө
+  </h3>
+  {[
+    {
+      title: "Магистрын сургалт",
+      plans: [
+        ["Анагаах ухаан", "1urN8IlfdZaczsPzDbYInRDbgqeHQbkwK"],
+        ["Био-Анагаах ухаан", "1PWxt3Fq21QRhcbdk50jP4yhG3qpgbuNZ"],
+        ["Нийгмийн эрүүл мэнд", "1yHgm0ZrDrY4lnpMNRK1NhR9U-rKPRnuT"],
+        ["Нүүр ам судлал", "1NDahkhanB8r3O5Alf6XEceASUb_xfgdU"],
+        ["Сувилахуй", "1fLW9kueo5RxDjixzvO_d248LpHgodxBt"],
+        ["Уламжлалт анагаах ухаан", "1HEhZUy7y0DTrWd2ur2kmypV0f9K0ewLS"],
+        ["Хөдөлгөөн засал", "1cESNJ031nZSYjOuKEyOF70Dt2MdEX__t"],
+        ["Хөдөлмөр засал", "1b-8ZglZAb_EpjvFa0q_I2RBOk-ZgMAC0"],
+        ["Эм зүй", "1rQwdM950JxyQMSt8qPdsqekhytMvQ5TY"],
+        ["Эх барихуй", "1fMmxIW9VLNczS_pVgr4I1muwn8y-bDES"],
+      ],
+    },
+    {
+      title: "Докторын сургалт",
+      plans: [
+        ["Анагаах ухаан", "1XwBZieEq1TVSjg2APUVxKAJqHdCdk3Tf"],
+        ["Био-Анагаах ухаан", "1A0nN6YDiJDjL-C7u_qq6O3V2X7DJjxtX"],
+        ["Нийгмийн эрүүл мэнд", "1kUoIhf05fU7vtRqozbNTrG6QcF82huYU"],
+        ["Нүүр ам судлал", "1TApj26edopb4KODQAlSEcl5bgF_8HB3q"],
+        ["Сувилахуй", "1UV1XC3O6kXv1LBQyJE5Zqu8tmT-E9eMS"],
+        ["Уламжлалт анагаах ухаан", "1t3awd7KvMPkZSeAUVOx4LK3f-tD-qlbA"],
+        ["Хөдөлгөөн засал", "1pF7IW4zIwqKVHNVB09yZoeTbbfHU7pAA"],
+        ["Хөдөлмөр засал", "1iTjOUx0hpvi4mCw9SnjO9rVbONSkl6T3"],
+        ["Эм зүй", "1IFDANG5y5zBltM195dGRYrP8TJifofN3"],
+        ["Эх барихуй", "1wgAd__VkCPHiWfSIs1hWgGos10Obrlyr"],
+      ],
+    },
+  ].map((group) => (
+    <div key={group.title} className="mb-5">
+      <h4 className="font-semibold text-foreground mb-2">
+        {group.title}
+      </h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {group.plans.map(([name, id]) => (
+          <a
+            key={id}
+            href={`https://drive.google.com/file/d/${id}/view`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between rounded-lg border border-border bg-muted/30 p-3 text-sm text-foreground hover:bg-primary/5 hover:border-primary/30 transition-colors"
+          >
+            <span>{name}</span>
+            <ExternalLink className="w-4 h-4 text-muted-foreground shrink-0" />
+          </a>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
                 {/* Research Scholarship */}
                 <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-3">
