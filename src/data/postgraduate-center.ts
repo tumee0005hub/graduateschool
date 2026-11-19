@@ -1354,7 +1354,7 @@ export const trainingPrograms: TrainingProgram[] = [
   },
 ];
 
-/** Бааз эмнэлгүүд */
+/** Бааз эмнэлгүүд-- */
 export const baseHospitals: LocalizedText[] = [
   { mn: "АШУҮИС МЯЭ", en: "MNUMS Mother and Child Hospital" },
   { mn: "АШУҮИС НАСТЭ", en: "MNUMS Geriatric Hospital" },
