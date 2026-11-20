@@ -1439,3 +1439,15 @@ export const baseHospitals: LocalizedText[] = [
   { mn: "Улсын Хоёрдугаар Төв Эмнэлэг", en: "Second Central Hospital" },
   { mn: "Хавдар Судлалын Үндэсний Төв", en: "National Cancer Center" },
 ];
+
+/** Удиртгал/Сонгон хичээл */
+export interface ElectiveCourse {
+  name: LocalizedText;
+  /** Хөтөлбөр/материалын холбоос (байхгүй бол хоосон орхино) */
+  href?: string;
+}
+
+export const electiveCourses: ElectiveCourse[] = [
+  // Жишээ — хичээл нэмэхдээ доорх мөрийг хуулж, "//"-ийг арилгана:
+  // { name: { mn: "Хичээлийн нэр", en: "Course name" }, href: "https://drive.google.com/..." },
+];
