@@ -6,6 +6,7 @@ import {
   trainingPrograms,
   subspecializations,
   baseHospitals,
+  electiveCourses,
 } from "@/data/postgraduate-center";
 import { getHospitals } from "@/lib/site-content";
 import { localeAlternates } from "@/lib/seo";
@@ -64,6 +65,7 @@ export default async function PostgraduateCenterPage({
     { id: "subspecialization", label: t(dict, "menu.postgraduateSubspec") },
     { id: "programs", label: t(dict, "menu.postgraduatePrograms") },
     { id: "hospitals", label: t(dict, "menu.postgraduateHospitals") },
+    { id: "electives", label: t(dict, "menu.postgraduateElectives") },
   ];
 
   const graduationType1Steps = (p.graduationType1Steps ?? []) as Step[];
@@ -445,6 +447,50 @@ export default async function PostgraduateCenterPage({
                   ),
                 )}
               </div>
+            </section>
+
+            {/* ── УДИРТГАЛ/СОНГОН ХИЧЭЭЛ ── */}
+            <section id="electives" className="scroll-mt-24">
+              <h2 className="text-2xl font-bold text-foreground mb-4">
+                {t(p, "electivesTitle")}
+              </h2>
+              <p className="text-foreground/80 leading-[1.85] mb-6">
+                {t(p, "electivesIntro")}
+              </p>
+              {electiveCourses.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  {t(p, "electivesEmpty")}
+                </p>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {electiveCourses.map((c, i) =>
+                    c.href ? (
+                      <a
+                        key={i}
+                        href={c.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-2 rounded-lg border border-border bg-muted/30 px-4 py-3 text-sm text-foreground/80 hover:bg-primary/5 hover:border-primary/30 hover:text-primary transition-colors"
+                      >
+                        <span className="text-muted-foreground shrink-0">
+                          {i + 1}.
+                        </span>
+                        <span>{c.name[lang]}</span>
+                      </a>
+                    ) : (
+                      <div
+                        key={i}
+                        className="flex items-start gap-2 rounded-lg border border-border bg-muted/30 px-4 py-3 text-sm"
+                      >
+                        <span className="text-muted-foreground shrink-0">
+                          {i + 1}.
+                        </span>
+                        <span className="text-foreground/80">{c.name[lang]}</span>
+                      </div>
+                    ),
+                  )}
+                </div>
+              )}
             </section>
           </main>
         </div>
