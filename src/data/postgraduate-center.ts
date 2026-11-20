@@ -1448,6 +1448,10 @@ export interface ElectiveCourse {
 }
 
 export const electiveCourses: ElectiveCourse[] = [
+  {
+    name: { mn: "Ирц бүртгүүлэх", en: "Attendance registration" },
+    href: "https://sites.google.com/pt.mnums.edu.mn/2026resident",
+  },
   // Жишээ — хичээл нэмэхдээ доорх мөрийг хуулж, "//"-ийг арилгана:
   // { name: { mn: "Хичээлийн нэр", en: "Course name" }, href: "https://drive.google.com/..." },
 ];
