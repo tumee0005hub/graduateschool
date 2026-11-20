@@ -55,6 +55,7 @@
     "postgraduatePrograms": "Training Programs",
     "postgraduateSubspec": "Sub-specialization Training",
     "postgraduateHospitals": "Base Hospitals",
+    "postgraduateElectives": "Introductory/Elective Courses",
     "trainingCenters": "Training Centers",
     "education": "Programmes",
     "research": "Scientific Research",
@@ -2273,7 +2274,10 @@
     "subspecColDuration": "Duration",
     "subspecColTuition": "Tuition (₮)",
     "hospitalsTitle": "BASE HOSPITALS",
-    "hospitalsIntro": "Postgraduate training activities are organized not only at MNUMS-affiliated hospitals but also at contracted state and private hospitals. The training fields and number of trainees at each contracted hospital are regulated according to agreements between MNUMS and the contracted hospitals, depending on the resources and capacity of each hospital. The MNUMS Vice-Rector for Hospital Affairs signs cooperation agreements with contracted hospitals annually."
+    "hospitalsIntro": "Postgraduate training activities are organized not only at MNUMS-affiliated hospitals but also at contracted state and private hospitals. The training fields and number of trainees at each contracted hospital are regulated according to agreements between MNUMS and the contracted hospitals, depending on the resources and capacity of each hospital. The MNUMS Vice-Rector for Hospital Affairs signs cooperation agreements with contracted hospitals annually.",
+    "electivesTitle": "INTRODUCTORY/ELECTIVE COURSES",
+    "electivesIntro": "Introductory and elective courses for postgraduate trainees.",
+    "electivesEmpty": "Information coming soon."
   },
   "studentCouncil": {
     "title": "Student Council"
