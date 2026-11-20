@@ -15,7 +15,7 @@ export interface SpecializationGroup {
 export const basicSpecializations: SpecializationGroup[] = [
   {
     title: {
-      mn: "Хүний их эмч элсэн суралцах боломжтой мэргэшлийн чиглэлүүд:",
+      mn: "Хүний их эмч элсэн суралцах боломжтой мэргэшлийн чиглэлүүд**:",
       en: "Specializations available for Medical Doctors:",
     },
     items: [
